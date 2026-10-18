@@ -1,0 +1,46 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="600" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F4F4F5" />
+      <stop offset="100%" stop-color="#E4E4E7" />
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(0,0,0,0.05)" stroke-width="1" />
+    </pattern>
+    <radialGradient id="blueGlow" cx="300" cy="300" r="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0052FF" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#0052FF" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="600" fill="url(#bgGrad)" rx="24" />
+  <rect width="600" height="600" fill="url(#grid)" rx="24" />
+  <circle cx="300" cy="300" r="240" fill="url(#blueGlow)" />
+
+  <!-- Outer Architectural Ring -->
+  <circle cx="300" cy="300" r="220" stroke="rgba(0,0,0,0.08)" stroke-width="2" stroke-dasharray="8 6" />
+  <circle cx="300" cy="300" r="180" stroke="#0052FF" stroke-width="2" opacity="0.6" />
+
+  <!-- Profile Silhouette / Brand Mark -->
+  <g transform="translate(300, 270)">
+    <!-- Head/Core circle -->
+    <circle cx="0" cy="-30" r="62" fill="#18181B" />
+    <!-- Focus aperture -->
+    <circle cx="0" cy="-30" r="24" fill="none" stroke="#0052FF" stroke-width="2.5" stroke-dasharray="4 4" />
+    <circle cx="0" cy="-30" r="9" fill="#0052FF" />
+    
+    <!-- Shoulders Arc -->
+    <path d="M -115 110 C -115 40, -60 30, 0 30 C 60 30, 115 40, 115 110 Z" fill="#27272A" />
+  </g>
+
+  <!-- Technical Overlay Badges -->
+  <rect x="40" y="520" width="230" height="36" rx="8" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="1" />
+  <text x="155" y="543" fill="#09090B" font-family="monospace" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1">OGUNPITAN TIMI (TI)</text>
+  
+  <rect x="360" y="520" width="200" height="36" rx="8" fill="#0052FF" stroke="#0052FF" stroke-width="1" />
+  <text x="460" y="543" fill="#FFFFFF" font-family="monospace" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="1">FRONTEND DEV</text>
+
+  <!-- Crosshairs -->
+  <path d="M 300 35 L 300 55 M 300 545 L 300 565 M 35 300 L 55 300 M 545 300 L 565 300" stroke="#0052FF" stroke-width="2" opacity="0.5" />
+</svg>

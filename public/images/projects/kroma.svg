@@ -1,0 +1,38 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="750" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B0C10" />
+      <stop offset="100%" stop-color="#151720" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#bgGrad)" rx="16" />
+
+  <!-- Kroma Studio Palette Swatches -->
+  <g transform="translate(100, 100)">
+    <!-- Swatch 1 -->
+    <rect width="180" height="500" rx="16" fill="#0F172A" />
+    <text x="90" y="440" fill="#F8FAFC" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle">#0F172A</text>
+    <text x="90" y="465" fill="#94A3B8" font-family="sans-serif" font-size="12" text-anchor="middle">Slate 900</text>
+
+    <!-- Swatch 2 -->
+    <rect x="205" width="180" height="500" rx="16" fill="#1E293B" />
+    <text x="295" y="440" fill="#F8FAFC" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle">#1E293B</text>
+    <text x="295" y="465" fill="#94A3B8" font-family="sans-serif" font-size="12" text-anchor="middle">Slate 800</text>
+
+    <!-- Swatch 3 -->
+    <rect x="410" width="180" height="500" rx="16" fill="#00F0FF" />
+    <text x="500" y="440" fill="#0F172A" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle">#00F0FF</text>
+    <text x="500" y="465" fill="#0F172A" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">Cyan Accent</text>
+
+    <!-- Swatch 4 -->
+    <rect x="615" width="180" height="500" rx="16" fill="#10B981" />
+    <text x="705" y="440" fill="#0F172A" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle">#10B981</text>
+    <text x="705" y="465" fill="#0F172A" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">Emerald Vivid</text>
+
+    <!-- Swatch 5 -->
+    <rect x="820" width="180" height="500" rx="16" fill="#F8FAFC" />
+    <text x="910" y="440" fill="#0F172A" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle">#F8FAFC</text>
+    <text x="910" y="465" fill="#64748B" font-family="sans-serif" font-size="12" text-anchor="middle">Pure Light</text>
+  </g>
+</svg>

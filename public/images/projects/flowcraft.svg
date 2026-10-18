@@ -1,0 +1,54 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="750" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#090A0F" />
+      <stop offset="100%" stop-color="#121520" />
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1.5" fill="rgba(255,255,255,0.08)" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#bgGrad)" rx="16" />
+  <rect width="1200" height="750" fill="url(#grid)" rx="16" />
+
+  <!-- Node Canvas -->
+  <g transform="translate(100, 75)">
+    <!-- Node 1: Start Trigger -->
+    <rect x="100" y="220" width="200" height="120" rx="10" fill="#181B26" stroke="#00F0FF" stroke-width="2" />
+    <circle cx="130" cy="250" r="10" fill="#00F0FF" />
+    <text x="150" y="255" fill="#F8FAFC" font-family="sans-serif" font-size="14" font-weight="600">User Webhook</text>
+    <text x="130" y="295" fill="#94A3B8" font-family="monospace" font-size="12">POST /api/v1/event</text>
+
+    <!-- Node 2: Logic Branch -->
+    <rect x="420" y="140" width="220" height="130" rx="10" fill="#181B26" stroke="#3B82F6" stroke-width="2" />
+    <circle cx="450" cy="170" r="10" fill="#3B82F6" />
+    <text x="470" y="175" fill="#F8FAFC" font-family="sans-serif" font-size="14" font-weight="600">Transform Payload</text>
+    <rect x="450" y="200" width="160" height="12" rx="4" fill="rgba(255,255,255,0.1)" />
+    <rect x="450" y="225" width="120" height="12" rx="4" fill="rgba(255,255,255,0.1)" />
+
+    <!-- Node 3: Database Output -->
+    <rect x="750" y="260" width="200" height="120" rx="10" fill="#181B26" stroke="#10B981" stroke-width="2" />
+    <circle cx="780" cy="290" r="10" fill="#10B981" />
+    <text x="800" y="295" fill="#F8FAFC" font-family="sans-serif" font-size="14" font-weight="600">PostgreSQL Store</text>
+    <text x="780" y="335" fill="#10B981" font-family="monospace" font-size="12">SUCCESS (200 OK)</text>
+
+    <!-- Connecting Curved Vector Paths -->
+    <path d="M 300 280 C 360 280, 360 205, 420 205" fill="none" stroke="#00F0FF" stroke-width="3" stroke-dasharray="6 6" />
+    <path d="M 640 205 C 700 205, 690 320, 750 320" fill="none" stroke="#3B82F6" stroke-width="3" />
+
+    <!-- Connection Dots -->
+    <circle cx="300" cy="280" r="5" fill="#00F0FF" />
+    <circle cx="420" cy="205" r="5" fill="#00F0FF" />
+    <circle cx="640" cy="205" r="5" fill="#3B82F6" />
+    <circle cx="750" cy="320" r="5" fill="#10B981" />
+  </g>
+
+  <!-- FlowCraft Canvas Toolbar -->
+  <rect x="450" y="620" width="300" height="50" rx="25" fill="#1A1D2B" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  <circle cx="500" cy="645" r="14" fill="rgba(255,255,255,0.06)" />
+  <circle cx="550" cy="645" r="14" fill="#00F0FF" opacity="0.8" />
+  <circle cx="600" cy="645" r="14" fill="rgba(255,255,255,0.06)" />
+  <circle cx="650" cy="645" r="14" fill="rgba(255,255,255,0.06)" />
+  <circle cx="700" cy="645" r="14" fill="rgba(255,255,255,0.06)" />
+</svg>

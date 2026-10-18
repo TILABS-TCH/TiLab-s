@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Warm gallery canvas */
+  --bg-main: #fbf9f5;
+  --bg-subtle: #f4f0e8;
+  --bg-surface: #ffffff;
+  --bg-elevated: #ffffff;
+
+  /* Default Active Accent: Electric Royal Blue */
+  --accent-primary: #0052ff;
+  --accent-hover: #0042d0;
+  --accent-subtle: #eff6ff;
+  --accent-border: #bfdbfe;
+
+  /* Clean tactile borders */
+  --border-subtle: #e8e3d9;
+  --border-medium: #d6cfc2;
+  --border-active: var(--accent-primary);
+
+  /* High contrast ink typography */
+  --text-main: #0c0d12;
+  --text-muted: #4e5361;
+  --text-dim: #717786;
+  --text-subtle: #9ba0ad;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 2px rgba(12, 13, 18, 0.04), 0 1px 3px rgba(12, 13, 18, 0.02);
+  --shadow-card: 0 2px 8px -2px rgba(12, 13, 18, 0.06), 0 1px 4px -1px rgba(12, 13, 18, 0.03);
+  --shadow-hover: 0 12px 28px -6px rgba(12, 13, 18, 0.09), 0 4px 10px -2px rgba(12, 13, 18, 0.04);
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "Space Mono", monospace;
+}
+
+/* Dynamic live color theme modes */
+[data-accent="coral"] {
+  --accent-primary: #ea580c;
+  --accent-hover: #c2410c;
+  --accent-subtle: #fff7ed;
+  --accent-border: #fed7aa;
+}
+
+[data-accent="purple"] {
+  --accent-primary: #7c3aed;
+  --accent-hover: #6d28d9;
+  --accent-subtle: #f5f3ff;
+  --accent-border: #ddd6fe;
+}
+
+[data-accent="emerald"] {
+  --accent-primary: #059669;
+  --accent-hover: #047857;
+  --accent-subtle: #ecfdf5;
+  --accent-border: #a7f3d0;
+}
+
+[data-accent="amber"] {
+  --accent-primary: #d97706;
+  --accent-hover: #b45309;
+  --accent-subtle: #fffbeb;
+  --accent-border: #fde68a;
+}
+
+[data-accent="rose"] {
+  --accent-primary: #e11d48;
+  --accent-hover: #be123c;
+  --accent-subtle: #fff1f2;
+  --accent-border: #fecdd3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Tactile card */
+.tactile-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tactile-card:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-medium);
+}
+
+/* Architectural Grid with subtle warmth */
+.bg-architectural-grid {
+  background-size: 38px 38px;
+  background-image: 
+    linear-gradient(to right, rgba(12, 13, 18, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(12, 13, 18, 0.035) 1px, transparent 1px);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-primary);
+  color: #ffffff;
+}
+
+/* Focus Ring */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
