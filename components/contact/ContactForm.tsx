@@ -68,7 +68,7 @@ export function ContactForm() {
           name: formData.name,
           email: formData.email,
           subject: `New TILABS Inquiry: ${formData.projectType} from ${formData.name}`,
-          project_type: formData.projectType,
+          projectType: formData.projectType,
           message: formData.message,
           from_name: "TILABS Portfolio Contact",
         }),
