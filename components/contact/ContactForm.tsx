@@ -18,7 +18,6 @@ export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
-
   const projectTypes = [
     "Freelance Web Project",
     "Full-time Role",
@@ -59,14 +58,13 @@ export function ContactForm() {
     setFormError(null);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: siteConfig.web3formsKey,
           name: formData.name,
           email: formData.email,
           subject: `New TILABS Inquiry: ${formData.projectType} from ${formData.name}`,
@@ -221,7 +219,7 @@ export function ContactForm() {
                     <div className="p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs font-mono space-y-2">
                       <div className="flex items-center gap-2 font-bold">
                         <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
-                        <span>Web3Forms Notice: {formError}</span>
+                        <span>Message not sent: {formError}</span>
                       </div>
                       <p className="font-sans text-rose-700">
                         You can also send your message directly via email to{" "}

@@ -123,21 +123,23 @@ export const siteConfig = {
   fullName: "Ogunpitan Oluwatimileyin Samuel",
   brandName: "TILABS",
   status: "Available for freelance projects",
-  email: "your.email@example.com",
-  web3formsKey: "your-web3forms-access-key", // <-- Put your Web3Forms Access Key here!
+   email: "your.email@example.com",
   github: "https://github.com/your-username",
   ...
 }
 ```
 
-### 2. Setting Up Web3Forms (Takes 10 seconds — No signup required!):
-1. Go to **[web3forms.com](https://web3forms.com)**.
-2. Enter your email: **`timi.tilabs@gmail.com`** and click **"Create Access Key"**.
-3. Check your Gmail inbox — Web3Forms will immediately email you your Access Key (a UUID like `a1b2c3d4-e5f6-7890-abcd-ef1234567890`).
-4. Either:
-   - Paste it in `data/content.ts` under `web3formsKey: "your-key-here"`, OR
-   - Create a `.env.local` file with: `NEXT_PUBLIC_WEB3FORMS_KEY=your-key-here`.
-5. That's it! Every message submitted via the contact form will now land directly in your Gmail inbox.
+### 2. Setting Up Web3Forms
+1. Go to [web3forms.com](https://web3forms.com), enter the inbox where you want to receive messages, and create an access key.
+2. In the project root, copy `.env.example` to `.env.local`.
+3. Replace the placeholder with your access key:
+   ```dotenv
+   WEB3FORMS_ACCESS_KEY=paste_your_access_key_here
+   ```
+4. Restart the development server after changing the environment file. The contact form submits to the site's server route, which forwards the message to Web3Forms without exposing the access key to the browser.
+5. For production, add `WEB3FORMS_ACCESS_KEY` in your hosting provider's environment-variable settings and redeploy. Do not add the `NEXT_PUBLIC_` prefix, commit `.env.local`, or paste the key into `data/content.ts`.
+
+If the key is missing, the server rejects submissions and the form displays a direct email fallback.
 
 ### 3. Adding or Editing Projects:
 Modify the `projects` array in `data/content.ts`:

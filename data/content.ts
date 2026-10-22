@@ -61,7 +61,6 @@ export const siteConfig = {
   status: "Available for freelance & full-time projects",
   location: "Lagos, Nigeria (Remote)",
   email: "timi.tilabs@gmail.com",
-  web3formsKey: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_WEB3FORMS_KEY",
   github: "https://github.com/tilabs-dev",
   linkedin: "https://linkedin.com/in/tilabs",
   twitter: "https://x.com/tilabs_dev",

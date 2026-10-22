@@ -10,11 +10,11 @@ import { MagneticButton } from "@/components/ui/MagneticButton";
 export function SelectedWork() {
   const [filter, setFilter] = useState<string>("All");
 
-  const categories = ["All", "Web Application", "Developer Tool", "E-Commerce", "Design Tool"];
+  const categories = ["All", ...new Set(projects.map((project) => project.category))];
 
   const filteredProjects =
     filter === "All"
-      ? projects.slice(0, 6)
+      ? projects.filter((project) => project.featured)
       : projects.filter((p) => p.category.toLowerCase().includes(filter.toLowerCase()));
 
   return (
